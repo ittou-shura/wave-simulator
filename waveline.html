@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="waveline.css">
+</head>
+<body>
+    <div id="controlOverlay">
+        <div class="WPButton">Show Panel</div>
+        <div id = "inputContainer" class = "inputContainerOFF">
+            <div class = "inputs"><input id="slider1" type="range" min="0" max="1000" value="40"></div>
+            <div class = "inputs"><input id="slider3" type="range" min="0.001" max="1000" value="40">></div>
+            <div class = "inputs"><input id="slider2" type="range" min="1.0001" max="1000" value="1000">></div>
+            <div class = "inputs"><input id="slider4" type="range" min="0" max="100" value="40">></div>
+            <div class="value" id="value1">value1</div>
+            <div class="value" id="value2">value2</div>
+            <div class="value" id="value3">value3</div>
+            <div class="value" id="value4">value4</div>
+        </div>
+        <div class="buttonContainer">
+            <div class="buttons"></div>
+            <div class="buttons"></div>
+            <div class="buttons"></div>
+            <div class="buttons"></div>
+            <div class="buttons"></div>
+        </div>
+    </div>
+    <canvas id = "MyCanvas"></canvas>
+    <script src = "waveline.js"></script>
+</body>
+</html>

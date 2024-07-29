@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+html{
+    overflow: hidden;
+    background-color: transparent;
+}
+body{
+    background-color: transparent;
+}
+#MyCanvas{
+    position: absolute;
+    background-color: black;
+    z-index: 0;
+}
+#controlOverlay{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    z-index: 1;
+    background-color:transparent;
+
+}
+.WPButton{
+    /* position: absolute; */
+    
+    border:2px solid white;
+    height:2em ;
+    width: fit-content;
+    text-align: center;
+    color:white;
+    border-radius:11px;
+    padding:5px;
+}
+.WPButton:hover{
+    border:2px solid red;
+    height:2em ;
+    width: fit-content;
+    text-align: center;
+    color:black;
+    background-color: white;
+    transition:0.3s;
+    border-radius:11px;
+    padding:3px;
+}
+.inputContainerOFF{
+    display:none;
+}
+.inputContainer{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10px 10px 10px 10px  ;
+    column-gap: 30px;
+    row-gap:2em;
+    height: fit-content;
+    /* border:2px solid red;  */
+    justify-content: center;
+    align-items: start;
+    padding:10px;
+    margin-bottom:10px;
+    transition:1s;
+}
+.inputs{
+    transition:2s;
+    height: 2em;
+    width: 25em;
+    /* outline: 2px solid white; */
+}
+.value{
+    transition: 1s;
+    height:2em;
+    width:2rem;
+    /* border:2px solid white; */
+    color:white;
+    text-align: center;
+    user-select: none;
+    text-wrap:wrap;
+}
+
+#value1{
+    grid-row:1/2;
+}
+#value2{
+    grid-row:2/3;
+}
+#value3{
+    grid-row:3/4;
+}
+#value4{
+    grid-row:4/5;
+}
+input{
+    width: 100%;
+    
+}
