@@ -1,0 +1,179 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Control Overlay Container */
+  #controlOverlay {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  /* Toggle and Reset Button Styling */
+  .WPButton {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  .WPButton:hover {
+    background-color: #555;
+  }
+  
+  /* Visible Panel */
+  .inputContainer {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    max-height: 600px;
+    opacity: 1;
+    overflow-y: auto;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  /* Collapsed Panel */
+  .inputContainerOFF {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  /* Control Group for Each Property */
+  .control-group {
+    margin-bottom: 20px;
+  }
+  
+  .control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Slider Styling */
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    transition: background 0.3s;
+    margin-top: 5px;
+  }
+  
+  input[type="range"]:hover {
+    background: #ccc;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background: #555;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    background: #555;
+  }
+  
+  /* Value Display */
+  .value {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Toggle Switch Styling */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-top: 5px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+  
+  .slider-switch:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .switch input:checked + .slider-switch {
+    background-color: #2196F3;
+  }
+  
+  .switch input:checked + .slider-switch:before {
+    transform: translateX(26px);
+  }
+  
+  /* Full-Screen Canvas */
+  canvas#MyCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  

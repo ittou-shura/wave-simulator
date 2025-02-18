@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wave Control Panel</title>
+  <link rel="stylesheet" href="waveline.css" />
+</head>
+<body>
+  <!-- Control Panel Overlay -->
+  <div id="controlOverlay">
+    <!-- Panel Toggle Button -->
+    <button id="togglePanelBtn" class="WPButton">Show Panel</button>
+    
+    <!-- Control Panel Container -->
+    <div id="inputContainer" class="inputContainerOFF">
+      
+      <!-- Amplitude Control -->
+      <div class="control-group">
+        <label for="amplitudeSlider">Amplitude</label>
+        <input id="amplitudeSlider" type="range" min="0" max="1000" value="80" />
+        <span class="value" id="amplitudeValue">80</span>
+      </div>
+      
+      <!-- Frequency Control -->
+      <div class="control-group">
+        <label for="frequencySlider">Frequency</label>
+        <input id="frequencySlider" type="range" min="0.001" max="10" step="0.0001" value="0.18008" />
+        <span class="value" id="frequencyValue">0.18008</span>
+      </div>
+      
+      <!-- Amplitude Swing Toggle -->
+      <div class="control-group">
+        <label for="amplitudeSwingSwitch">Amplitude Swing</label>
+        <label class="switch">
+          <input id="amplitudeSwingSwitch" type="checkbox" />
+          <span class="slider-switch"></span>
+        </label>
+      </div>
+      
+      <!-- Swing Number Control -->
+      <div class="control-group">
+        <label for="swingNumberSlider">Swing Number</label>
+        <input id="swingNumberSlider" type="range" min="1" max="500" value="100" />
+        <span class="value" id="swingNumberValue">100</span>
+      </div>
+      
+      <!-- Frequency Swing Toggle -->
+      <div class="control-group">
+        <label for="frequencySwingSwitch">Frequency Swing</label>
+        <label class="switch">
+          <input id="frequencySwingSwitch" type="checkbox" />
+          <span class="slider-switch"></span>
+        </label>
+      </div>
+      
+      <!-- Frequency Swing Number Control -->
+      <div class="control-group">
+        <label for="frequencySwingNumberSlider">Frequency Swing Number</label>
+        <input id="frequencySwingNumberSlider" type="range" min="1" max="1000000000" value="1000000000" />
+        <span class="value" id="frequencySwingNumberValue">1000000000</span>
+      </div>
+      
+      <!-- Modulation Toggle -->
+      <div class="control-group">
+        <label for="modulationSwitch">Modulation</label>
+        <label class="switch">
+          <input id="modulationSwitch" type="checkbox" />
+          <span class="slider-switch"></span>
+        </label>
+      </div>
+      
+      <!-- Modulation Coefficient Control -->
+      <div class="control-group">
+        <label for="modulationCoefficientSlider">Modulation Coefficient</label>
+        <input id="modulationCoefficientSlider" type="range" min="0" max="1" step="0.001" value="0.050" />
+        <span class="value" id="modulationCoefficientValue">0.050</span>
+      </div>
+      
+      <!-- modXMap Control -->
+      <div class="control-group">
+        <label for="modXMapSlider">Mod X Map</label>
+        <input id="modXMapSlider" type="range" min="0" max="2" step="0.001" value="0.819" />
+        <span class="value" id="modXMapValue">0.819</span>
+      </div>
+      
+      <!-- Bell Mode Toggle -->
+      <div class="control-group">
+        <label for="bellModeSwitch">Bell Mode</label>
+        <label class="switch">
+          <input id="bellModeSwitch" type="checkbox" />
+          <span class="slider-switch"></span>
+        </label>
+      </div>
+      
+      <!-- Peak Bell Curve Control -->
+      <div class="control-group">
+        <label for="peakBellCurveSlider">Peak Bell Curve</label>
+        <input id="peakBellCurveSlider" type="range" min="0" max="10" step="0.1" value="3.5" />
+        <span class="value" id="peakBellCurveValue">3.5</span>
+      </div>
+      
+      <!-- bellXMap Control -->
+      <div class="control-group">
+        <label for="bellXMapSlider">Bell X Map</label>
+        <input id="bellXMapSlider" type="range" min="0" max="0.02" step="0.0001" value="0.008" />
+        <span class="value" id="bellXMapValue">0.008</span>
+      </div>
+      
+      <!-- Damped X Map Control -->
+      <div class="control-group">
+        <label for="dampXMapSlider">Damped X Map</label>
+        <input id="dampXMapSlider" type="range" min="0" max="0.1" step="0.0001" value="0.009" />
+        <span class="value" id="dampXMapValue">0.009</span>
+      </div>
+      
+      <!-- Damping Control -->
+      <div class="control-group">
+        <label for="dampingSlider">Damping</label>
+        <input id="dampingSlider" type="range" min="0" max="100" value="0" />
+        <span class="value" id="dampingValue">0</span>
+      </div>
+      
+      <!-- Axis Control -->
+      <div class="control-group">
+        <label for="axisSlider">Axis</label>
+        <input id="axisSlider" type="range" min="-3.14" max="3.14" step="0.01" value="0" />
+        <span class="value" id="axisValue">0</span>
+      </div>
+      
+      <!-- Offset X Control -->
+      <div class="control-group">
+        <label for="offsetXSlider">Offset X</label>
+        <input id="offsetXSlider" type="range" min="-1000" max="1000" step="1" value="0" />
+        <span class="value" id="offsetXValue">0</span>
+      </div>
+      
+      <!-- Offset Y Control -->
+      <div class="control-group">
+        <label for="offsetYSlider">Offset Y</label>
+        <input id="offsetYSlider" type="range" min="-1000" max="1000" step="1" value="0" />
+        <span class="value" id="offsetYValue">0</span>
+      </div>
+      
+      <!-- Reset Button -->
+      <div class="control-group">
+        <button id="resetBtn" class="WPButton">Reset</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Canvas for the Wave -->
+  <canvas id="MyCanvas"></canvas>
+  <script src="waveline.js"></script>
+</body>
+</html>
